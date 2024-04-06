@@ -1,0 +1,180 @@
+body {
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    }
+
+
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+
+  /* Titles */
+  .section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+    }
+
+    .pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--secondaryTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+    }
+
+    .pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--lineColor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+    }
+
+    /* Layouts */
+    .grid-3 {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; use this first, use code below when its time for explaining responsive design part */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    }
+
+
+    
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+  /* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+  /* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+  /* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+
+  /* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+  /* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+  /* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* end of nabar */
+
+.header h1 {
+    text-align: center;
+    position: relative;
+}
+
+
+.header {
+    padding: 10px;
+    margin: 10px
+}
+
+/* home page */
+#homepage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px auto;
+}
+
+#homepage h1,h2,h3 {
+    text-align: center;
+    position: relative;
+}
+
+#homepage p {
+    text-align: center;
+    position: relative;
+}
+
+#homepage .kiri {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.kiri h2 { 
+    padding: 1.2rem;
+}
+
+.kiri, .kanan {
+    padding: 20px;
+}
+
+.logo img {
+  width: 100%; /* Sesuaikan lebar logo */
+  height: auto; /* Tinggi logo akan menyesuaikan secara otomatis */
+}
+/* end off home page */

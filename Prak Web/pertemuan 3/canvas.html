@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 255, 255);
+            padding: 0;
+            margin: 0;
+            background-color: #d3d3d3;
+        }
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+        }
+        canvas {
+            border: 1px solid rgb(219, 219, 219);
+            border-radius: 1px;
+            padding: 50px 40px 20px 40px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            color: #737373;
+            background: white;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    <h2>Canvas</h2>
+    <canvas id="myCanvas" width="600" height="300" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        
+        <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        
+        // Membuat gradient
+        var gradient = ctx.createLinearGradient(0, 0, canvas.width / 3, 0);
+        gradient.addColorStop("0", "red");
+        gradient.addColorStop("0.5", "blue");
+        gradient.addColorStop("1.0", "red");
+        
+        // Menggunakan gradient untuk mengisi bagian kiri canvas
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, canvas.width / 3, canvas.height);
+        
+        // Membuat lingkaran di tengah canvas
+        ctx.beginPath();
+        ctx.arc(canvas.width / 2, canvas.height / 2, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+        
+        // Membuat garis lurus di bagian kanan canvas
+        ctx.beginPath();
+        ctx.moveTo(2 * canvas.width / 3, 0);
+        ctx.lineTo(2 * canvas.width / 3, canvas.height);
+        ctx.stroke();
+        </script>
+        
+        
+    <a href=""></a>
+</body>
+</html>
