@@ -1,9 +1,3 @@
-body {
-    background-color: aliceblue;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 
 * {
@@ -11,64 +5,59 @@ body {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    }
+}
 
+body {
+    background-color:  #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-
-.container {
+.main-container {
     width: 1200px;
     margin: 0 auto;
 
 }
 
-
-  /* Titles */
-  .section-title {
-    margin: 1rem 0 4rem;
-    font-size: 2rem;
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
     }
-
-    .pre-title {
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    color: var(--secondaryTextColor);
-    position: relative;
-    padding-left: 40px;
-    width: fit-content;
-    font-weight: 400;
-    font-size: 0.9rem;
-    }
-
-    .pre-title::before {
-    content: "";
-    width: 30px;
-    height: 1px;
-    background: var(--lineColor);
-    position: absolute;
-    display: block;
-    left: 0;
-    top: 50%;
-    }
-
-    /* Layouts */
-    .grid-3 {
-    display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; use this first, use code below when its time for explaining responsive design part */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3rem;
-    }
+}
 
 
-    
 /* Navbar container */
 .navbar {
+    display: flex;
     overflow: hidden;
     background-color: #333;
     font-family: Arial;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2rem;
+
+}
+
+.navbar .logo {
+    float: left;
+    padding-left: 10px;
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    padding-left: 3rem;
+}
+.navbar .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+.navbar .logo a:hover {
+    color: whitesmoke;
+    text-decoration: none;
+
 }
 
   /* Links inside the navbar */
-.navbar a {
+.navbar  a {
     float: left;
     font-size: 16px;
     color: white;
@@ -95,7 +84,7 @@ body {
     margin: 0; /* Important for vertical align on mobile phones */
 }
   /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar  nav a:hover, .dropdown:hover .dropbtn {
     background-color: red;
 }
 
@@ -130,6 +119,7 @@ body {
     display: block;
 }
 
+
 /* end of nabar */
 
 .header h1 {
@@ -148,16 +138,22 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 10px auto;
+    align-items: center
 }
 
 #homepage h1,h2,h3 {
     text-align: center;
     position: relative;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
 }
 
 #homepage p {
     text-align: center;
     position: relative;
+    font-size: 1rem; /* 16 px */
+    line-height: 1.9rem; /*30.4 px */
 }
 
 #homepage .kiri {
@@ -169,12 +165,20 @@ body {
     padding: 1.2rem;
 }
 
+.kiri span {
+    color: aquamarine;
+}
 .kiri, .kanan {
     padding: 20px;
 }
 
+.kanan h2 {
+    display: flex;
+    justify-content: center;
+}
+
 .logo img {
-  width: 100%; /* Sesuaikan lebar logo */
+  width: 90%; /* Sesuaikan lebar logo */
   height: auto; /* Tinggi logo akan menyesuaikan secara otomatis */
 }
 /* end off home page */
