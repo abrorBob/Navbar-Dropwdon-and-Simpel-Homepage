@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST 4</title>
+    <script>
+        function changeGoogleCom() {
+            var a = document.getElementById('myGoogle');
+            a.href = 'https://www.google.com';
+        }
+        function changeGoogleCoId() {
+            var a = document.getElementById('myGoogle');
+            a.href = 'https://google.co.id';
+        }
+    </script>
+    <style>
+        button {
+            position: relative;
+            background-color: rgb(230, 34, 77);
+            border-radius: 5px;
+            box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+            padding: 15px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            box-sizing: border-box;
+            width: 154px;
+            height: 49px;
+            color: #fff;
+            border: none;
+            font-size: 12px;
+            transition: all 0.3s ease-in-out;
+            z-index: 1;
+            overflow: hidden;
+          }
+          
+          button::before {
+            content: "";
+            background-color: rgb(248, 50, 93);
+            width: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: width 700ms ease-in-out;
+            display: inline-block;
+          }
+          
+          button:hover::before {
+            width: 100%;
+          }
+          a {
+            color: rgb(0, 0, 255);
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px;
+
+          }
+          a:hover {
+            text-decoration: underline;
+            color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
+          }
+
+    </style>
+</head>
+<body>
+    <a id="myGoogle" href="http://google.com">Go To Google</a>
+    <button onclick="changeGoogleCom()">Change Google.com</button>
+    <button onclick="changeGoogleCoId()">Change google.co.id</button>
+    <a href="ganticss.html">next tugas</a>
+</body>
+</html>

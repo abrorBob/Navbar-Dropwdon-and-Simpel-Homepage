@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST 6</title>
+    <script>
+        function show() {
+            var p = document.getElementById('myText');
+            p.style.display = 'block';
+        }
+        function hide() {
+            var p = document.getElementById('myText');
+            p.style.display = 'none';
+        }
+    </script>
+    <style>
+        button {
+            padding: 17px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            border: 0;
+            background-color: white;
+            box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 15px;
+            transition: all 0.5s ease;
+          }
+          
+          button:hover {
+            letter-spacing: 3px;
+            background-color: hsl(261deg 80% 48%);
+            color: hsl(0, 0%, 100%);
+            box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+          }
+          
+          button:active {
+            letter-spacing: 3px;
+            background-color: hsl(261deg 80% 48%);
+            color: hsl(0, 0%, 100%);
+            box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+            transform: translateY(10px);
+            transition: 100ms;
+          }
+          a {
+            text-decoration: none;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+          }        
+          a:hover {
+            text-decoration: underline;
+            color: rgb(0, 0, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            background-color: rgb(255, 255, 255);
+           }  
+    </style>
+</head>
+<body>
+    <p id="myText" style="font-size: 2rem;">Ini test hasil nanti</p>
+    <button onclick="show()">show</button>
+    <button onclick="hide()">hide</button>
+    <a href="test8.html">next tugas</a>
+</body>
+</html>
